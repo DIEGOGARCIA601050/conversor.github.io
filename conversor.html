@@ -80,14 +80,14 @@
 						console.log(number)
 						binario2(number)
 					}
-		const $ = document.getElementById("dollars")
+		let $ = document.getElementById("dollars")
 		function convert() {
 		let botonDeConversión = document.getElementById("convert-button")
 		botonDeConversión.addEventListener("click", Convertir)
 		}
 		
 		function Convertir() {
-			
+			let n = number/25
 			$ = $/25
 			console.log(document.getElementById($).innerHTML)
 			console.log($)
