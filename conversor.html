@@ -7,7 +7,7 @@
 	<style> 
 		body
 		{
-			color: #03045e;
+			color: #04067e;
 			background-color:rgb(90, 84, 187);
             font-family:Arial, Helvetica, sans-serif;
 		}	
@@ -53,34 +53,10 @@
   	</form>
     <button id="convert-button">Convertir a pesos</button>
     <p>Cantidad en pesos: <span id="pesos"></span></p>
-	<section id="resultados1"></section>
-	<section id="resultados2"></section>
-	<section id="resultados3"></section>
-	<section id="resultados4"></section>
-	<section id="resultados5"></section>
-	<section id="resultados6"></section>
-	<section id="resultados7"></section>
-	<section id="resultados8"></section>
+	<section id="resultados"></section>
 
 	<script>
-
-		let number = prompt("Que número quieres convertir a binario")
-		if(128>number) {
-				let resultados = document.getElementById("resultados1")
-				let parrafo = document.createElement("p")
-				parrafo.innerHTML = 0
-				resultados.appendChild(parrafo)
-				binario2(number)
-				} else {
-						let resultados = document.getElementById("resultados1")
-						let parrafo = document.createElement("p")
-						parrafo.innerHTML = 1
-						resultados.appendChild(parrafo)
-						number = number - 128
-						console.log(number)
-						binario2(number)
-					}
-		let $ = document.getElementById("dollars")
+				let $ = document.getElementById("dollars")
 		function convert() {
 		let botonDeConversión = document.getElementById("convert-button")
 		botonDeConversión.addEventListener("click", Convertir)
@@ -95,131 +71,21 @@
 		}
 
 		window.addEventListener("load", convert)
-		
-		function binario2 (num) {
-				if (num<64) {
-					let results = document.getElementById("resultados2")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario3(num)
-				} else {
-						let results = document.getElementById("resultados2")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 64
-						console.log(num)
-						binario3(num)
-					}
-		}
 
-		function binario3 (num) {
-				if (num<32) {
-					let results = document.getElementById("resultados3")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario4(num)
-				} else {
-						let results = document.getElementById("resultados3")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 32
-						console.log(num)
-						binario4(num)
-					}
-		}
 
-		function binario4 (num) {
-			console.log(num)
-				if (num<16) {
-					let results = document.getElementById("resultados4")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario5(num)
-				} else {
-						let results = document.getElementById("resultados4")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 16
-						console.log(num)
-						binario5(num)
-					}
-		}
+		let number = prompt("Que número quieres convertir a binario")
+		let n = number
+let binary = ""
+while (number > 0) {
+    let remainder = number % 2
+    binary = remainder + binary
+    number = Math.floor(number / 2)
+}
+	let results = document.getElementById("resultados")
+	let paragrapht = document.createElement("p")
+	paragrapht.innerHTML = ('El número ' + n + ' a binario es: ' + binary)
+	results.appendChild(paragrapht)
 
-		function binario5 (num) {
-			console.log(num)
-				if (8>num){
-					let results = document.getElementById("resultados8")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario6(num)
-				} else {
-						let results = document.getElementById("resultados8")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 8
-						binario6(num)
-					}
-		}
-
-				function binario6 (num) {
-				console.log(num)
-					if (num<4) {
-					let results = document.getElementById("resultados5")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario7(num)
-				} else {
-						let results = document.getElementById("resultados5")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 4
-
-						binario7(num)
-					}
-		}
-
-		function binario7 (num) {
-				console.log(num)
-				if (num<2) {
-					let results = document.getElementById("resultados6")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-					binario8(num)
-				} else {
-						let results = document.getElementById("resultados6")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-						num = num - 2
-						binario8(num)
-						console.log(num)
-					}
-		}
-
-		function binario8 (num) {
-				if (num<1) {
-					let results = document.getElementById("resultados7")
-					let paragrapht = document.createElement("p")
-					paragrapht.innerHTML = 0
-					results.appendChild(paragrapht)
-				} else {
-						let results = document.getElementById("resultados7")
-						let paragrapht = document.createElement("p")
-						paragrapht.innerHTML = 1
-						results.appendChild(paragrapht)
-					}
-		}
 	</script>
   </body>
 </html>
