@@ -45,6 +45,7 @@
   <body>
 	
     <h1>Conversor de divisas</h1>
+	<button id="binario">boton de conversión a binario</button>
     <p>Introduzca la cantidad de dolares que desea cambiar:</p>
 	<form action="">
 		<label for="dollars"></label>
@@ -56,24 +57,12 @@
 	<section id="resultados"></section>
 
 	<script>
-				let $ = document.getElementById("dollars")
-		function convert() {
-		let botonDeConversión = document.getElementById("convert-button")
-		botonDeConversión.addEventListener("click", Convertir)
-		}
-		
-		function Convertir() {
-			let n = number/25
-			$ = $/25
-			console.log(document.getElementById($).innerHTML)
-			console.log($)
-			return alert("Son " + $ + " Pesos")
+		let Botonbinario = document.getElementById('binario')
+		Botonbinario.addEventListener('click', binario)
+		function binario() {
+			let number = prompt("Que número quieres convertir a binario")			
 		}
 
-		window.addEventListener("load", convert)
-
-
-		let number = prompt("Que número quieres convertir a binario")
 		let n = number
 let binary = ""
 while (number > 0) {
@@ -144,6 +133,25 @@ export async function insert(item){
 }
 
 todoForm.addEventListener('submit', e )
+	</script>
+	<script>
+						let $ = document.getElementById("dollars")
+		function convert() {
+		let botonDeConversión = document.getElementById("convert-button")
+		botonDeConversión.addEventListener("click", Convertir)
+		}
+		
+		function Convertir() {
+			let n = number/25
+			$ = $/25
+			console.log(document.getElementById($).innerHTML)
+			console.log($)
+			return alert("Son " + $ + " Pesos")
+		}
+
+		window.addEventListener("load", convert)
+
+
 	</script>
   </body>
 </html>
