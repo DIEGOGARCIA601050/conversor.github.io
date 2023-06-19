@@ -3,7 +3,7 @@
   <head>
 	<meta charset="utf8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cambio de divisas</title>
+    <title>decimal a binario</title>
 	<style> 
 		body
 		{
@@ -44,7 +44,7 @@
 
   <body>
 	
-    <h1>Conversor de divisas</h1>
+    <h1>Conversor a binario</h1>
 	<button id="binario">boton de conversión a binario</button>
     <p>Introduzca la cantidad de dolares que desea cambiar:</p>
 	<form action="">
@@ -59,11 +59,10 @@
 	<script>
 		let Botonbinario = document.getElementById('binario')
 		Botonbinario.addEventListener('click', binario)
+		let number
 		function binario() {
-			let number = prompt("Que número quieres convertir a binario")			
-		}
-
-		let n = number
+			let number = prompt("Que número quieres convertir a binario")	
+			let n = number
 let binary = ""
 while (number > 0) {
     let remainder = number % 2
@@ -74,6 +73,9 @@ while (number > 0) {
 	let paragrapht = document.createElement("p")
 	paragrapht.innerHTML = ('El número ' + n + ' a binario es: ' + binary)
 	results.appendChild(paragrapht)
+		
+		}
+
 
 	</script>
 	<script type="module">
