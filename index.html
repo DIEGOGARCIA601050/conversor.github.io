@@ -55,7 +55,10 @@
     <button id="convert-button">Convertir a pesos</button>
     <p>Cantidad en pesos: <span id="pesos"></span></p>
 	<section id="resultados"></section>
-
+	<script>
+		document.querySelector('form')
+		.addEventListener('submit')
+	</script>
 	<script>
 		let Botonbinario = document.getElementById('binario')
 		Botonbinario.addEventListener('click', binario)
@@ -66,9 +69,11 @@
 let binary = ""
 while (number > 0) {
     let remainder = number % 2
+	//registra los resultados en binary como cadena de texto
     binary = remainder + binary
     number = Math.floor(number / 2)
 }
+	//lo muestra en pantalla
 	let results = document.getElementById("resultados")
 	let paragrapht = document.createElement("p")
 	paragrapht.innerHTML = ('El número ' + n + ' a binario es: ' + binary)
