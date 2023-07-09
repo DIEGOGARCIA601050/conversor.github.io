@@ -3,94 +3,137 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Sirve para analizar las propiedades de html y de css">
+    <meta
+      name="description"
+      content="Sirve para analizar las propiedades de html y de css"
+    >
     <meta name="robots" content="index,follow">
     <title>decimal a binario</title>
     <style>
       body {
         background-image: url("./alexander-sinn-YYUM2sNvnvU-unsplash.jpg");
-        color: #04067e;
         background-color: rgb(90, 84, 187);
         font-family: Arial, Helvetica, sans-serif;
+        width: 1350px;
+        height: 90px;
       }
-	   
-	  main {
-		display: block;
-	  }
 
-	  h1 {
-		background-color: rgb(90, 84, 187);
-		color: black;
-		display: inline-block;
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	  }
+      main {
+        display: block;
+      }
 
-	  #binario {
-		display: block;
-	  }
+      h1 {
+        background-color: rgb(90, 84, 187);
+        color: black;
+        display: inline-block;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
 
-	  #convert-button {
-		display: block;
-		margin-bottom: 10px;
-	  }
+      #binario {
+        display: block;
+      }
 
-	  p {
-		background-color: rgb(90, 84, 187);
-		color: black;
-		display: inline-block;
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	  }
+      #convert-button {
+        display: block;
+        margin-bottom: 10px;
+      }
 
-	  /* Solo usar "div" cuando este sea el único*/
+      p {
+        background-color: rgb(90, 84, 187);
+        color: black;
+        display: inline-block;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
 
-	  footer {
-		display: block;
-	  }
+      footer {
+        background-color: rgb(90, 84, 187);
+        padding: 50px;
+        position: absolute;
+        bottom: 0;
+        padding-right: 970px;
+      }
 
-	  div {
-		background-color: rgb(90, 84, 187);
-		color: black;
-		display: inline-block;
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	  }
+      section {
+        background-color: rgb(90, 84, 187);
+        color: black;
+        display: inline-block;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
 
-	  a  {
-		background-color: rgb(90, 84, 187);
-		color: black;
-		display: inline-block;
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	  }
+      .divisa {
+        float: left;
+      }
+
+      .binario {
+        width: 380.8px;
+        height: 159.833px;
+      }
+ 
+      .fin {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      a {
+        position: relative;
+        background-color: rgb(90, 84, 187);
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
     </style>
   </head>
 
   <body>
     <main>
-		<h1>Conversor a binario</h1>
-    <button id="binario">boton de conversión a binario</button>
-    <!-- <p>Introduzca la cantidad de dolares que desea cambiar:</p> -->
-    <form action="f">
-      <label for="dollars"></label>
-      <input type="number" id="dollars" name="dollars">
-      <input type="submit" value="enviar cantidad">
-    </form>
-    <button id="convert-button">Convertir a pesos</button>
-    <!-- <p>Cantidad en pesos: <span id="pesos"></span></p> -->
-    <div id="resultados"></div>
-	</main>
+      <section class="binario">
+        <h1>Conversor a binario</h1>
+        <button id="binario">boton de conversión a binario</button>
+      </section>
+      <section class="divisa">
+        <h1>Convertir de dolares a pesos</h1>
+        <form action="f">
+          <label for="dollars">
+            Introduzca la cantidad de dolares que desea cambiar: </label
+          ><br>
+          <input type="number" id="dollars" name="dollars" />
+        </form>
+        <button id="convert-button">Convertir a pesos</button>
+      </section>
+
+      <div id="resultados"></div>
+    </main>
+    <br>
     <script>
-      document.querySelector("form").addEventListener("submit");
+      let divisa = document.getElementById("dollars").value;
+      let n = divisa;
+      let convertidor = document.getElementById("convert-button");
+      convertidor.addEventListener("click", conversor);
+      function conversor() {
+        let resultados = divisa * 17.15;
+        let results = document.getElementById("resultados");
+        let paragrapht = document.createElement("p");
+        paragrapht.innerHTML = n + " dolares en pesos son: $" + resultados;
+        results.appendChild(paragrapht);
+      }
     </script>
     <script>
       let Botonbinario = document.getElementById("binario");
@@ -183,18 +226,17 @@
       window.addEventListener("load", convert);
     </script>
     <footer>
-      <div>
-		Foto de
+      <div class="fin">
+        <p class="fin">Foto de</p>
       <a
         href="https://unsplash.com/@swimstaralex?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
         >Alexander Sinn</a
       >
-      en
+      <p class="fin">en</p>
       <a
         href="https://unsplash.com/es/s/fotos/c%C3%B3digo-binario?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
         >Unsplash</a
-      >
-	  </div>
+      </div>
     </footer>
   </body>
 </html>
