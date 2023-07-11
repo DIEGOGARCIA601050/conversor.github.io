@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="description"
-      content="Sirve para analizar las propiedades de html y de css"
+      content="convierte unidades decimales a binario, y dolares a pesos"
     >
     <meta name="robots" content="index,follow">
     <title>decimal a binario</title>
@@ -14,8 +14,8 @@
         background-image: url("./alexander-sinn-YYUM2sNvnvU-unsplash.jpg");
         background-color: rgb(90, 84, 187);
         font-family: Arial, Helvetica, sans-serif;
-        width: 1350px;
-        height: 90px;
+        /* width: 1350px;
+        height: 90px; */
       }
 
       main {
@@ -53,10 +53,15 @@
 
       footer {
         background-color: rgb(90, 84, 187);
-        padding: 50px;
         position: absolute;
         bottom: 0;
-        padding-right: 970px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        left: 0;
+        height: 70px;
+        width: 1366.283px;
       }
 
       section {
@@ -118,17 +123,23 @@
         </form>
         <button id="convert-button">Convertir a pesos</button>
       </section>
-
+      
       <div id="resultados"></div>
     </main>
     <br>
     <script>
       let divisa = document.getElementById("dollars").value;
+      let num = parseInt(divisa)
+      console.log(num+1)
       let n = divisa;
       let convertidor = document.getElementById("convert-button");
       convertidor.addEventListener("click", conversor);
       function conversor() {
-        let resultados = divisa * 17.15;
+        location.reload('./index.html');
+        conversión()        
+      }
+      function conversión() {
+        let resultados = num * 17.15;
         let results = document.getElementById("resultados");
         let paragrapht = document.createElement("p");
         paragrapht.innerHTML = n + " dolares en pesos son: $" + resultados;
@@ -207,23 +218,6 @@
       }
 
       todoForm.addEventListener("submit", e);
-    </script>
-    <script>
-      let $ = document.getElementById("dollars");
-      function convert() {
-        let botonDeConversión = document.getElementById("convert-button");
-        botonDeConversión.addEventListener("click", Convertir);
-      }
-
-      function Convertir() {
-        let n = number / 25;
-        $ = $ / 25;
-        console.log(document.getElementById($).innerHTML);
-        console.log($);
-        return alert("Son " + $ + " Pesos");
-      }
-
-      window.addEventListener("load", convert);
     </script>
     <footer>
       <div class="fin">
