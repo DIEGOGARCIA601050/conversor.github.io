@@ -14,8 +14,6 @@
         background-image: url("./alexander-sinn-YYUM2sNvnvU-unsplash.jpg");
         background-color: rgb(90, 84, 187);
         font-family: Arial, Helvetica, sans-serif;
-        /* width: 1350px;
-        height: 90px; */
       }
 
       main {
@@ -30,6 +28,7 @@
         padding-right: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
+        text-align: center;
       }
 
       #binario {
@@ -81,6 +80,16 @@
       .binario {
         width: 380.8px;
         height: 159.833px;
+        text-align: center;
+      }
+
+      .binary{
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
       }
  
       .fin {
@@ -111,7 +120,9 @@
     <main>
       <section class="binario">
         <h1>Conversor a binario</h1>
-        <button id="binario">boton de conversión a binario</button>
+        <div class="binary">
+          <button id="binario" class="binary">boton de conversión a binario</button>
+        </div>
       </section>
       <section class="divisa">
         <h1>Convertir de dolares a pesos</h1>
@@ -120,19 +131,22 @@
             Introduzca la cantidad de dolares que desea cambiar: </label
           ><br>
           <input type="number" id="dollars" name="dollars" />
+          <input type="submit" contenteditable="enviar">
         </form>
         <button id="convert-button">Convertir a pesos</button>
       </section>
-      <section>
-        <h1>conversión a decimal</h1>
-        <button id="-binario"></button>
+      <section class="binario">
+        <h1>conversión a decimal</h1><br>
+        <div class="binary">
+          <button id="-binario" class="binary">numero en binario</button>
+        </div>
       </section>
       <div id="resultados"></div>
     </main>
     <br>
     <script>
       // Obtener el elemento del input de dólares
-      let divisa = document.getElementById("dollars").value;
+      let divisa = document.getElementById('dollars').value
       // Convertir el valor del input a un número entero
       let num = parseInt(divisa);
       // Guardar el valor del input en la variable n
@@ -143,8 +157,6 @@
       convertidor.addEventListener("click", conversor);
       // Función que se ejecuta al hacer clic en el botón de conversión
       function conversor() {
-        // Recargar la página actual
-        location.reload('./index.html');
         // Llamar a la función de conversión
         conversión();
       }
@@ -160,6 +172,7 @@
         paragrapht.innerHTML = n + " dólares en pesos son: $" + resultados;
         // Agregar el párrafo al elemento de resultados
         results.appendChild(paragrapht);
+
       }
     </script>
 
@@ -252,7 +265,7 @@
         const data = Object.fromEntries(
           new FormData(e.target)
         )
-        alert(JSON)
+        console.info(JSON?.stringify(data))
       })
         
     </script>
