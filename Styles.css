@@ -1,0 +1,103 @@
+body {
+    background-image: url("./alexander-sinn-YYUM2sNvnvU-unsplash.jpg");
+    background-color: rgb(90, 84, 187);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  main {
+    display: block;
+  }
+
+  h1 {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  #binario {
+    display: block;
+  }
+
+  #convert-button {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  p {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  footer {
+    background-color: rgb(90, 84, 187);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    height: 70px;
+    width: 1366.283px;
+  }
+
+  section {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .divisa {
+    float: left;
+  }
+
+  .binario {
+    width: 380.8px;
+    height: 159.833px;
+    text-align: center;
+  }
+
+  .binary{
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .fin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  a {
+    position: relative;
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
