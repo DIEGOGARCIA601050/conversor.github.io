@@ -1,4 +1,4 @@
-      // Obtener el elemento del input de dólares
+// Obtener el elemento del input de dólares
       let divisa = document.getElementById('dollars').value
       // Convertir el valor del input a un número entero
       let num = parseInt(divisa);
@@ -25,5 +25,4 @@
         paragrapht.innerHTML = n + " dólares en pesos son: $" + resultados;
         // Agregar el párrafo al elemento de resultados
         results.appendChild(paragrapht);
-
       }

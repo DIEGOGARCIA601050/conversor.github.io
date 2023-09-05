@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
       content="convierte unidades decimales a binario, y dolares a pesos"
-    >
-    <meta name="robots" content="index,follow">
+    />
+    <meta name="robots" content="index,follow" />
     <title>decimal a binario</title>
-    <link rel="stylesheet" href="./Styles.css">
+    <link rel="stylesheet" href="./Styles.css" />
   </head>
 
   <body>
     <main>
-      <section class="binario">
-        <h1>Conversor a binario</h1>
-        <div class="binary">
-          <button id="binario" class="binary">boton de conversión a binario</button>
-        </div>
+      <section class="responsive">
+        <section class="binario">
+          <h1>Conversor a binario</h1>
+          <div class="binary">
+            <button id="binario" class="binary">
+              boton de conversión a binario
+            </button>
+          </div>
+        </section>
+        <section class="divisa">
+          <h1>Convertir de dolares a pesos</h1>
+          <form action="f">
+            <label for="dollars">
+              Introduzca la cantidad de dolares que desea cambiar: </label
+            ><br />
+            <input type="number" id="dollars" name="dollars" />
+            <input type="submit" contenteditable="enviar" />
+          </form>
+          <button id="convert-button">Convertir a pesos</button>
+        </section>
+        <section class="binario">
+          <h1>conversión a decimal</h1>
+          <br />
+          <div class="binary">
+            <button id="-binario" class="binary">numero en binario</button>
+          </div>
+        </section>
       </section>
-      <section class="divisa">
-        <h1>Convertir de dolares a pesos</h1>
-        <form action="f">
-          <label for="dollars">
-            Introduzca la cantidad de dolares que desea cambiar: </label
-          ><br>
-          <input type="number" id="dollars" name="dollars" />
-          <input type="submit" contenteditable="enviar">
-        </form>
-        <button id="convert-button">Convertir a pesos</button>
-      </section>
-      <section class="binario">
-        <h1>conversión a decimal</h1><br>
-        <div class="binary">
-          <button id="-binario" class="binary">numero en binario</button>
-        </div>
-      </section>
+      
       <div id="resultados"></div>
     </main>
     <br>
-    <script src="./DolaresApesos.js"></script>
-    <script src="./form.js"></script>
-    <script src="./DecimalaBinario.js"></script>
+    <script src="./JS/DolaresApesos.js"></script>
+    <script src="./JS/form.js"></script>
+    <script src="./JS/DecimalaBinario.js"></script>
     <footer>
       <div class="fin">
         <p class="fin">Foto de</p>
-      <a
-        href="https://unsplash.com/@swimstaralex?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-        >Alexander Sinn</a
-      >
-      <p class="fin">en</p>
-      <a
-        href="https://unsplash.com/es/s/fotos/c%C3%B3digo-binario?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-        >Unsplash</a>
+        <a
+          href="https://unsplash.com/@swimstaralex?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Alexander Sinn</a
+        >
+        <p class="fin">en</p>
+        <a
+          href="https://unsplash.com/es/s/fotos/c%C3%B3digo-binario?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Unsplash</a
+        >
       </div>
     </footer>
   </body>
