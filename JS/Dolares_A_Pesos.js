@@ -8,7 +8,7 @@ const Convertir = ()=>{
   // Crear un nuevo párrafo para mostrar el resultado de la conversión
   let paragrapht = document.createElement("p");
   // Asignar el contenido del párrafo con el resultado de la conversión
-  paragrapht.innerHTML = n + " dólares en pesos son: $" + resultados;
+  paragrapht.innerHTML = num + " dólares en pesos son: $" + resultados;
   // Agregar el párrafo al elemento de resultados
   results.appendChild(paragrapht);
 }
