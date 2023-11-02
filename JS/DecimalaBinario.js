@@ -30,3 +30,6 @@ function binario() {
     paragrapht.innerHTML = "El número " + n + " a binario es: " + number;
     results.appendChild(paragrapht);
   }
+
+const botonDeBorrado = document.getElementById('borrando')
+botonDeBorrado.addEventListener('click',()=>{results.innerHTML=null})

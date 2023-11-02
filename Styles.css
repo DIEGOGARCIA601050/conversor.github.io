@@ -112,7 +112,9 @@ a {
   padding-left: 10px;
 }
 
-
+.borrar{
+  padding-top: 10px;
+}
 
 /* Estilos para dispositivos móviles (por ejemplo, smartphones) */
 @media (max-width: 767px) {
