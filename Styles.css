@@ -134,23 +134,43 @@ a {
     display: block;
   }
 
+  form {
+    margin: 0 auto;
+  }
+
+  input {
+    position: relative;
+    left: 43%;
+  }
+
 }
 
 /* Estilos para tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   .responsive {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: flex-start;
-  justify-content: center;
+  width: 98%;
+  height: 25vh;
 }
+  
   .binario {
-    display: block;
+    width: 90%;
   }
 
   .divisa {
     display: block;
+    width: 90%;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input {
+    display: flex;
+    position: relative;
+    left: 40%;
   }
 
 }
