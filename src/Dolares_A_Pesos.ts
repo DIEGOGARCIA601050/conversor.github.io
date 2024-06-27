@@ -1,4 +1,7 @@
-let Cantidad={};
+typo Divisa = {
+  dollars: number
+}
+let Cantidad:string | Divisa | null;
 
 const Convertir = () => {
   if (!Cantidad) {
