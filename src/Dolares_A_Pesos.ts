@@ -1,7 +1,7 @@
 typo Divisa = {
   dollars: number
 }
-let Cantidad:string | Divisa | null;
+let Cantidad:string | Divisa | undefined;
 
 const Convertir = () => {
   if (!Cantidad) {
