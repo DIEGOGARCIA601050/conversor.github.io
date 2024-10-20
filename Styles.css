@@ -1,12 +1,25 @@
+html,
+body {
+  height: 100%;
+  /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0;
+  /* Elimina márgenes por defecto */
+}
+
 body {
   background-image: url("./alexander-sinn-YYUM2sNvnvU-unsplash.jpg");
   background-color: rgb(90, 84, 187);
   font-family: Arial, Helvetica, sans-serif;
-  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  /* Organiza el contenido en una columna */
 }
 
 main {
   display: block;
+  flex: 1;
+  /* Permite que main ocupe todo el espacio disponible */
+  margin: 5px;
 }
 
 h1 {
@@ -41,15 +54,11 @@ p {
 
 footer {
   background-color: rgb(90, 84, 187);
-  position: absolute;
-  bottom: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  left: 0;
-  height: 70px;
-  width: 100%;
 }
 
 section {
@@ -63,6 +72,9 @@ section {
 }
 
 .divisa {
+  flex: 1;
+  /* Cada hijo ocupa igual espacio */
+  margin: 5px;
   float: left;
   flex-basis: 100px;
   flex-grow: 1;
@@ -75,13 +87,12 @@ section {
 }
 
 .binario {
-  width: 380.8px;
-  height: 159.833px;
-  text-align: center;
-  flex-basis: 100px;
+  flex: 1;
+  /* Cada hijo ocupa igual espacio */
+  margin: 5px;
 }
 
-.binary-b{
+.binary-b {
   position: relative;
   display: flex;
   align-items: center;
@@ -112,53 +123,57 @@ a {
   padding-left: 10px;
 }
 
-.borrar{
-  padding-top: 10px;
+.borrar {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* Estilos para dispositivos móviles (por ejemplo, smartphones) */
 @media (max-width: 767px) {
   .responsive {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: flex-start;
-    justify-content: center;
+    /* Activa el modelo Flexbox */
+    justify-content: space-between;
   }
 
   .binario {
-    display: block;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
   }
 
   .divisa {
     display: block;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
   }
 
   form {
     margin: 0 auto;
   }
 
-  /* input {
-    position: relative;
-    left: 43%;
-  } */
-
 }
 
 /* Estilos para tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   .responsive {
-  width: 98%;
-  height: 25vh;
-}
-  
+    display: flex;
+    /* Activa el modelo Flexbox */
+    justify-content: space-between;
+  }
+
   .binario {
-    width: 90%;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
   }
 
   .divisa {
-    display: block;
-    width: 90%;
+    float: left;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
   }
 
   label {
@@ -177,194 +192,196 @@ a {
 
 /* Estilos para computadoras portátiles y PC de escritorio */
 @media (min-width: 1024px) {
-h1 {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  text-align: center;
-}
+  .responsive {
+    display: block;
+  }
+  h1 {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
 
-#binario {
-  display: block;
-}
+  #convert-button {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-#convert-button {
-  display: block;
-  margin-bottom: 10px;
-}
+  p {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 
-p {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  footer {
+    background-color: rgb(90, 84, 187);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+  }
 
-footer {
-  background-color: rgb(90, 84, 187);
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  left: 0;
-  height: 70px;
-  width: 1366.283px;
-}
 
-section {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  section {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 
-.divisa {
-  float: left;
-}
+  .divisa {
+    float: left;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
+  }
 
-.binario {
-  width: 380.8px;
-  height: 159.833px;
-  text-align: center;
-}
+  .binario {
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
+  }
 
-.binary-b{
-  position: relative;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-}
+  .binary-b {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-.fin {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  .fin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-a {
-  position: relative;
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  a {
+    position: relative;
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 }
 
 /* Estilos para PC grandes o monitores de alta resolución */
 @media (min-width: 1200px) {
-h1 {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  text-align: center;
-}
+  h1 {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
 
-#binario {
-  display: block;
-}
+  #binario {
+    display: block;
+  }
 
-#convert-button {
-  display: block;
-  margin-bottom: 10px;
-}
+  #convert-button {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-p {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  p {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 
-footer {
-  background-color: rgb(90, 84, 187);
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  left: 0;
-  height: 70px;
-  width: 1366.283px;
-}
+  footer {
+    background-color: rgb(90, 84, 187);
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    height: 70px;
+  }
 
-section {
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: inline-block;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  section {
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 
-.divisa {
-  float: left;
-}
+  .divisa {
+    float: left;
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
+  }
 
-.binario {
-  width: 380.8px;
-  height: 159.833px;
-  text-align: center;
-}
+  .binario {
+    flex: 1;
+    /* Cada hijo ocupa igual espacio */
+    margin: 5px;
+  }
 
-.binary-b{
-  position: relative;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-}
+  .binary-b {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-.fin {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  .fin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-a {
-  position: relative;
-  background-color: rgb(90, 84, 187);
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+  a {
+    position: relative;
+    background-color: rgb(90, 84, 187);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
 }
