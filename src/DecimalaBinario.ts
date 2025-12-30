@@ -1,11 +1,10 @@
-let results = document.getElementById("resultados");
+let resultados = document.getElementById("resultados");
 
 let Botonbinario = document.getElementById("binario");
 Botonbinario.addEventListener("click", binario);
 let number;
 function binario(): void {
-  let number:string = prompt("Que número quieres convertir a binario");
-  let n:number = parseFloat(number);
+  let number: number = parseFloat(prompt("Que número quieres convertir a binario"));
   let binary:string = "";
   while (number > 0) {
     let remainder: number = number % 2;
@@ -14,21 +13,21 @@ function binario(): void {
     number = Math.floor(number / 2);
   }
   //lo muestra en pantalla
-  let paragrapht = document.createElement("p");
-  paragrapht.innerHTML = "El número " + n + " a binario es: " + binary;
-  results.appendChild(paragrapht);
+  let paragrapht:HTMLElement = document.createElement("p");
+  paragrapht.innerHTML = `El numero ${number} en binario es ${bniary}`;
+  resultados.appendChild(paragrapht);
 }
 
   //de binario a decimal
   let botonbinario = document.getElementById('-binario')
-  botonbinario.addEventListener('click', binarioinverso)
-  function binarioinverso() {
-    let number = prompt("Que número quieres convertir a binario");
-    let n = number;
-    number = parseInt(number, 2)
+  botonbinario.addEventListener('click', binarioAdecimal)
+  function binarioAdecimal() {
+    let numAconvertir: number = parseFloat(prompt("Que número quieres convertir a binario"));
+    let numEnBinario = numAconvertir;
+    numAconvertir = parseInt(numAconvertir, 2)
     let paragrapht = document.createElement("p");
-    paragrapht.innerHTML = "El número " + n + " en base 10 es: " + number;
-    results.appendChild(paragrapht);
+    paragrapht.innerHTML = `El numero ${numEnbinario} en decimal es ${numAconvertir}`;
+    resultados.appendChild(paragrapht);
   }
 
 const botonDeBorrado = document.getElementById('borrando')
