@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Un conversor de divisas y de numeros de una base a otra",
   "main": "Dolares_A_Pesos.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
