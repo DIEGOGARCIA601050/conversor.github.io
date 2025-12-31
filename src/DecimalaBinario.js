@@ -1,6 +1,6 @@
 "use strict";
 import { binario } from "./binario.js";
-import { binarioinverso } from "./decimal.js";
+import { binarioinverso } from "./binario/decimal.js";
 let results = document.getElementById("resultados");
 
 //de decimal a binario
