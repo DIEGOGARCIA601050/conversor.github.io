@@ -1,5 +1,5 @@
 "use strict";
-import { binario } from "./binario.js";
+import { binario } from "./binario/binario.js";
 import { binarioinverso } from "./binario/decimal.js";
 let results = document.getElementById("resultados");
 
