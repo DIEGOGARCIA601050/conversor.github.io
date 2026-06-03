@@ -11,6 +11,7 @@ const Convertir = () => {
 
 const form = document.querySelector('form');
 if (form) {
+    e.preventDefault();
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const data = Object.fromEntries(new FormData(e.target));
