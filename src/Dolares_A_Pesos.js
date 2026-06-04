@@ -1,20 +1,33 @@
 "use strict";
+let cantidad = { dollars: 0 };
 import { mostrarEnPantalla } from './binario/mostrarEnPantalla.js';
 let cantidad = 0;
 const Convertir = () => {
+    const dollars = Number(cantidad.dollars);
+    if (Number.isNaN(dollars)) {
     if (Number.isNaN(cantidad)) {
         throw new Error("Cantidad no válida. Debe ingresar un número para dólares.");
     }
+    const pesos = dollars * 17.15;
+    const resultados = document.getElementById("resultados");
+    if (!resultados) {
+        throw new Error("El elemento con id 'resultados' no existe");
+    }
+    const paragraph = document.createElement("p");
+    paragraph.textContent = `${dollars} dólares en pesos son: $${pesos.toFixed(2)}`;
+    resultados.appendChild(paragraph);
     const pesos = cantidad * 17.15;
     mostrarEnPantalla(`${cantidad} dólares en pesos son: $${pesos.toFixed(2)}`);
 };
 
 const form = document.querySelector('form');
 if (form) {
-    e.preventDefault();
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const data = Object.fromEntries(new FormData(e.target));
+        cantidad = {
+            dollars: data.dollars || 0
+        };
         cantidad = data.dollars || 0;
         try {
             Convertir();
@@ -33,4 +46,3 @@ if (form) {
 } else {
     console.error("No se encontró el formulario para conversión de dólares.");
 }
-
