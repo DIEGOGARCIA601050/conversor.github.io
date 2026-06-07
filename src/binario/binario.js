@@ -1,6 +1,7 @@
 let results = document.getElementById("resultados");
 export function binario() {
-    let number = parseFloat(prompt("Que número quieres convertir a binario"));
+    let numeroAconvertir = parseFloat(prompt("Que número quieres convertir a binario"));
+    let numeroOriginal=numeroAconvertir;
     let binary = "";
     while (number > 0) {
         let remainder = number % 2;
@@ -10,6 +11,6 @@ export function binario() {
     }
     //lo muestra en pantalla
     let paragrapht = document.createElement("p");
-    paragrapht.innerHTML = `El numero ${number} en binario es ${binary}`;
+    paragrapht.innerHTML = `El numero ${numeroOriginal} en binario es ${binary}`;
     results.appendChild(paragrapht);
 }
